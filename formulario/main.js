@@ -1,6 +1,6 @@
 class lapiz{
     #marca
-    constructor({color="#F0D000",
+    constructor({color="#ECDE41",
                 dimension=19,
                 borrador=true,
                 material="Madera",
@@ -16,11 +16,11 @@ class lapiz{
     }
 
     getDimension(){
-        return this.Dimension;
+        return this.dimension;
     }
 
     getMarca(){
-        return this.Marca;
+        return this.#marca;
     }
 
     getBorrador(){
@@ -29,7 +29,7 @@ class lapiz{
     getMaterial(){
         return this.material;
     }
-    getboton(){
+    getBoton(){
         return this.submit;
     }
 }
@@ -42,15 +42,36 @@ let material = madera.checked=true;
 let boton = checked = true;
 addEventListener("DOMContentLoaded",(e)=>{
     obj = new lapiz ({});
-    color.value = obj.color;
-    dimension.value = obj.dimension;
-    marca.value = obj.mongol;
-    borrador.value = obj.borrador;
-    material.value = obj.material;
+    color.values = obj.color;
+    dimension.values = obj.dimension;
+    marca.values = obj.marca;
+    borrador.values = obj.borrador;
+    material.values = obj.material;
     boton.checked = true;
-    boton = document.getElementById("boton")
+    boton = document.getElementById("boton");
+
+    const formulario=document.querySelector("#form");
+            formulario.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let caja = new lapiz({});
+            document.querySelector("#tabla").insertAdjacentHTML("beforeend",`
+            <tr>
+                <th>${caja.getcolor()}</th>
+                <th>${caja.getDimension()}</th>
+                <th>${caja.getMarca()}</th>
+                <th>${caja.getBorrador()}</th>
+                <th>${caja.getMaterial()}</th>
+            </tr>`);
+    })
     
 })
+
+
+
+
+
+ 
+
 
 
 
