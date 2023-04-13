@@ -1,4 +1,3 @@
-
 class lapiz{
     #marca
     constructor({color="#F0D000",
@@ -30,22 +29,27 @@ class lapiz{
     getMaterial(){
         return this.material;
     }
+    getboton(){
+        return this.submit;
+    }
 }
 let obj = undefined
 let color = document.querySelector(`[name= "color"]`)
 let dimension = document.querySelector(`[name = "dimension"]`)
-//let marca = document.querySelector(`[name="marca"]`)
+let marca = mongol.checked=true;
 let borrador = tiene.checked=true;
 let material = madera.checked=true;
+let boton = checked = true;
 addEventListener("DOMContentLoaded",(e)=>{
     obj = new lapiz ({});
     color.value = obj.color;
     dimension.value = obj.dimension;
-    //marca.value=obj.marca;
-    borrador.getElementById(tiene)= obj.borrador;
-    material.getElementById(marca)=obj.material;
-
-
+    marca.value = obj.mongol;
+    borrador.value = obj.borrador;
+    material.value = obj.material;
+    boton.checked = true;
+    boton = document.getElementById("boton")
+    
 })
 
 
