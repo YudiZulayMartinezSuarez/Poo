@@ -1,71 +1,54 @@
-class lapiz{
-    #marca
-    constructor({color="#ECDE41",
-                dimension=19,
-                borrador=true,
-                material="Madera",
-                marca="mongol"}){
-        this.color = color;
-        this.dimension = dimension;
-        this.borrador = borrador;
-        this.material = material;
-        this.#marca = marca;
-    }
-    getcolor(){
-    return this.color;
-    }
-
-    getDimension(){
-        return this.dimension;
-    }
-
-    getMarca(){
-        return this.#marca;
-    }
-
-    getBorrador(){
-        return this.borrador;
-    }
-    getMaterial(){
-        return this.material;
-    }
-    getBoton(){
-        return this.submit;
-    }
+const resultados = {
+    color : "",
+    dimension : "",
+    marca : "",
+    borrador : "",
+    material : "",
 }
-let obj = undefined
-let color = document.querySelector(`[name= "color"]`)
-let dimension = document.querySelector(`[name = "dimension"]`)
-let marca = mongol.checked=true;
-let borrador = tiene.checked=true;
-let material = madera.checked=true;
-let boton = checked = true;
-addEventListener("DOMContentLoaded",(e)=>{
-    obj = new lapiz ({});
-    color.values = obj.color;
-    dimension.values = obj.dimension;
-    marca.values = obj.marca;
-    borrador.values = obj.borrador;
-    material.values = obj.material;
-    boton.checked = true;
-    boton = document.getElementById("boton");
 
-    const formulario=document.querySelector("#form");
-            formulario.addEventListener("submit",(e)=>{
+const obj = undefined
+const color = document.querySelector(`#checkBoton`)
+color.addEventListener(`change`, datos)
+const dimension = document.querySelector(`#dimension`)
+dimension.addEventListener(`change`, datos)
+const mongol = document.querySelector(`#mongol`)
+mongol.addEventListener(`change`, datos)
+const norma = document.querySelector(`#norma`)
+norma.addEventListener(`change`, datos)
+const fabelCastle = document.querySelector(`#fabelCastle`)
+fabelCastle.addEventListener(`change`, datos)
+const big = document.querySelector(`#big`)
+big.addEventListener(`change`, datos)
+const borradorTiene = document.querySelector(`#tiene`)
+borradorTiene.addEventListener(`change`, datos)
+const borradorNoTiene = document.querySelector(`#noTiene`)
+borradorNoTiene.addEventListener(`change`, datos)
+const madera = document.querySelector(`#madera`)
+madera.addEventListener(`change`, datos)
+const goma = document.querySelector(`#goma`)
+goma.addEventListener(`change`, datos)
+const boton = checked = true;
+addEventListener("DOMContentLoaded",(e)=>{
+ const boton = document.getElementById("#boton");
+        const formulario = document.addEventListener("submit",(e)=>{
             e.preventDefault();
-            let caja = new lapiz({});
             document.querySelector("#tabla").insertAdjacentHTML("beforeend",`
             <tr>
-                <th>${caja.getcolor()}</th>
-                <th>${caja.getDimension()}</th>
-                <th>${caja.getMarca()}</th>
-                <th>${caja.getBorrador()}</th>
-                <th>${caja.getMaterial()}</th>
+                <th>${resultados.color}</th>
+                <th>${resultados.dimension}</th>
+                <th>${resultados.marca}</th>
+                <th>${resultados.borrador}</th>
+                <th>${resultados.material}</th>
             </tr>`);
+            
     })
     
 })
 
+function datos(e) {
+    console.log(e.target.value);
+    resultados[e.target.name] = e.target.value;}
+    console.log(resultados);
 
 
 

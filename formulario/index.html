@@ -15,29 +15,33 @@
         <fieldset>
             <legend>Clase Lapiz</legend>
             <label>Color</label>
-            <input type="color" name="color"><br>
-            <label name="dimension">Dimension</label>
-            <input type="range" name="dimension"><br>
+            <input type="color" name="color" id="checkBoton"><br>
+            <label name="dimension" >Dimension</label>
+            <input type="range" name="dimension" id="dimension"><br>
             <fieldset>
+                <br>
                 <legend>Marca</legend>
                 <input type="radio" name="marca" value="Mongo" id="mongol"><label>Mongo</label><br>
                 <input type="radio" name="marca" value="Norma" id="norma"><label>Norma</label><br>
-                <input type="radio" name="marca" value="Fabel Castle" id="fabel Castle"><label>Fabel Castle</label><br>
+                <input type="radio" name="marca" value="Fabel Castle" id="fabelCastle"><label>Fabel Castle</label><br>
                 <input type="radio" name="marca" value="Big" id="big"><label>Big</label><br>
             </fieldset>
+            <br>
             <fieldset>
                 <legend>Borrador</legend>
                 <input type="radio" name="borrador" value="true" id="tiene"><label>Tiene</label><br>
-                <input type="radio" name="borrador" value="false" id="no tiene"><label>No tiene</label><br>
+                <input type="radio" name="borrador" value="false" id="noTiene"><label>No tiene</label><br>
             </fieldset>
+            <br>
             <fieldset>
                 <legend>Material</legend>
                 <input type="radio" name="material" value="Madera" id="madera"><label>Madera</label><br>
                 <input type="radio" name="material" value="Goma" id="goma"><label>Goma</label><br>
             </fieldset>
+            <br>
             <input type="submit" name="boton" value="Enviar" id="enviar"  type="button" class="btn btn-danger position-relative">
         </fieldset>
-   
+            <br>
     </form>
 </div>
     <br><br><br>
@@ -51,7 +55,7 @@
                 <th>Material</th>
             </tr>
         </thead>
-        <tbody id="tabla">
+        <tbody id="tabla" >
 
         </tbody>
     </table>
